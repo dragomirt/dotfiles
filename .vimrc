@@ -23,37 +23,31 @@ let g:airline_theme='minimalist'
 syntax enable
 set backspace=2 " make backspace work like most other programs
 
-set number " show lines
-set showcmd	" show command in bottom bar
-set cursorline	" highlight current line
-filetype indent on	" load filetype-specific indent files
-set showmatch	" highlight matching
+set number				" show lines
+set showcmd				" show command in bottom bar
+set cursorline				" highlight current line
+filetype indent on			" load filetype-specific indent files
+set showmatch				" highlight matching
 
 "--------------Search-------------------
-set incsearch " Incremental Search
-set hlsearch	" Highlight matches
+set incsearch				" Incremental Search
+set hlsearch				" Highlight matches
 
 "-------------Folding-------------------
-set foldenable	" enable folding
-set foldlevelstart=5	" Lovel depth on start
-set foldmethod=indent	" Fold by indent
+set foldenable				" enable folding
+set foldlevelstart=5			" Lovel depth on start
+set foldmethod=indent			" Fold by indent
 
 "--------------Mapings------------------
+let mapleader = ","			"map leader to ',' instead of '/'
 
-" Opens vimrc editing in a new tab
-nmap ,ev :tabedit $MYVIMRC 
-
-" Sources vimrc file
-nmap ,evso :so $MYVIMRC 
-
-" Leader comma
-let mapleader=","       " leader is comma
+nmap <Leader>ev :tabedit $MYVIMRC<CR>	" Opens vimrc editing in a new tab
 
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
 
 " Space folding
-nnoremap <space> za
+"nnoremap <space> za
 
 " jk to escape
 inoremap jk <esc>
